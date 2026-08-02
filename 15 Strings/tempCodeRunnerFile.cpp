@@ -1,0 +1,2 @@
+
+        cout << "this both string

@@ -1,0 +1,17 @@
+#include<iostream>
+#include<vector>
+#include<cstring>
+using namespace std;
+
+int main() {
+    vector <vector<int>> matrix = {{3},{4,5},{7,8,9}};
+    for (int i = 0 ; i < matrix.size() ; i++ ){
+        
+        for (int j = 0 ; j < matrix[i].size() ; j++ ){
+            cout<<matrix[i][j];
+    }
+    cout<<endl;
+
+    }
+    return 0;
+}
