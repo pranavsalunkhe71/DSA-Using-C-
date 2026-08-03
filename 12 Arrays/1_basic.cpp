@@ -23,7 +23,7 @@ int main(){
 
 // cout<<marks22[0]<<endl<<marks22[1]<<endl<<marks22[3]<<endl; //here index 3 will pointing to 0
 
-
+ 
 
  /* the compiler automatically sets the size of the array to the number of elements in
   the initializer list. In this example, marks32 will have a size of 3.*/
@@ -31,3 +31,8 @@ int main(){
 
     return 0;
 }
+
+
+
+
+

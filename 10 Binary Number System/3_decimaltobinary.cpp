@@ -21,6 +21,8 @@
 // // return 0;
 // // }
 
+
+
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -30,8 +32,8 @@ void decimaltobinary(int decimal)
     int i = 0 ;
     while(decimal>0){
 
-        TempDecimal = pow(10, i) *( decimal % 2) ;
-        decimal /= 10 ;
+        TempDecimal += pow(10, i) *( decimal % 2) ;
+        decimal /= 2 ;
         i++;
     }
     

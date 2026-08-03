@@ -38,27 +38,40 @@
 
 #include<iostream>
 using namespace std;
-void findlargets(int arr[5]){
-    int max = arr[0];
-    int min = arr[0];
-    
-    for(int i = 0 ; i < 5 ; i++){
 
-        if (arr[i]>max){
-            max = arr[i];
-        }
-        
-        
-    }
-    cout<<"The Largest Value Is : "<<max;
 
-}
 
 int main() {
 
-    int a [5] = {5,33,65,208,24};
-    findlargets(a);
-    
+    int arraysize = 0;
+    cout<<"enter size for array : ";
+    cin>>arraysize;
+
+    int arr[arraysize] ;
+    int n = sizeof(arr) / sizeof(int);;
+    int Largest = 0;
+    int Smallest ;
+
+    for(int i = 0 ; i< n ; i++){
+        cout<<"Enter array element : ";
+        cin>>arr[i];
+
+    }
+
+
+    for(int i = 0 ; i < n ; i++){
+
+        if(arr[i] > Largest){
+            Largest = arr[i];
+        }
+        if(arr[i] < Smallest){
+            Smallest = arr[i];
+        }
+
+    }
+
+    cout<<Largest;
+    cout<<Smallest;
 
 
     return 0;

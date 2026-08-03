@@ -40,27 +40,66 @@
 // // }
 
 
+
+
+
+
+
+/* #include<iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {70,309,90,403} ;
+
+    int n = sizeof(arr) / sizeof(int);
+    for(int i = 0 ; i < n ; i++ ){
+
+        cout<<arr[i]<<endl;
+
+    }
+  
+
+
+    return 0;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #include<iostream>
 using namespace std;
 
 int main() {
-    int n ;
-    cout<< "enter a size of array : ";
-    cin>>n;
-    int arr[n] ;
 
+    int arraysize = 0;
+    cout<<"enter size for array : ";
+    cin>>arraysize;
 
-    int size = sizeof(arr) / sizeof(int);
+    int arr[arraysize] ;
+    int n = sizeof(arr) / sizeof(int);
 
-    for (int i = 0 ; i < size ; i++){
-    cout<<"enter a values for array :";
-    cin>>arr[i];
-                                    }
-
-    for (int i = 0 ; i< size ; i++){
-        cout<<arr[i]<<",";  
-        
+    for(int i = 0 ; i < n ; i++ ){
+        cout<<"enter element for array no "<<i<<" : ";
+        cin>>arr[i];
     }
+
+    for (int i = 0; i < n; i++)
+    {
+        cout<<arr[i]<<"\n";
+    }
+    
+
+
 
 
     return 0;
