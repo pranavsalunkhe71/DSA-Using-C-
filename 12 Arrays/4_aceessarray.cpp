@@ -43,3 +43,44 @@
 
 //     return 0 ;
 // }
+
+
+
+
+
+
+
+
+
+
+/* 
+
+#include<iostream>
+using namespace std;
+
+// void func(int arr[]){
+
+//     arr[0] = 12; 
+// }
+// void func1(int *arr){
+
+//     arr[0] = 13; 
+// }
+
+int main() {
+    
+    // int a = 5;
+    // int *ptr = &a;
+    // cout<<ptr;
+
+    int arr[] = {1,2,3,4,5};
+    int n = sizeof(arr) / sizeof(int);
+    // cout<<*arr<<endl;
+    // cout<<*arr+1<<endl;
+
+
+    // func(arr);
+    // func1(arr);
+    cout<<*arr;
+    return 0;
+} */
