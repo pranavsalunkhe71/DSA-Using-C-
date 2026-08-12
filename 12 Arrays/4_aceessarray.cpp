@@ -1,6 +1,5 @@
 // // array is always call  by referennce
 
-
 // #include<iostream>
 // using namespace std;
 
@@ -24,9 +23,7 @@
 
 // int main(){
 
-
-//     int arr[5] = {1,2,3,4,5}; 
-
+//     int arr[5] = {1,2,3,4,5};
 
 //     cout<<arr<<endl; //size of array
 //     cout<<*arr<<endl; //arr[0]
@@ -34,41 +31,29 @@
 //     cout<<*arr+2<<endl; //arr[2]
 //     cout<<*arr+3<<endl; //arr[3]
 
-
-
 //     function(arr);
 //     cout<<arr[0]<<"\n";
 //     printarray(arr);
 
-
 //     return 0 ;
 // }
 
-
-
-
-
-
-
-
-
-
-/* 
+/*
 
 #include<iostream>
 using namespace std;
 
 // void func(int arr[]){
 
-//     arr[0] = 12; 
+//     arr[0] = 12;
 // }
 // void func1(int *arr){
 
-//     arr[0] = 13; 
+//     arr[0] = 13;
 // }
 
 int main() {
-    
+
     // int a = 5;
     // int *ptr = &a;
     // cout<<ptr;
@@ -84,3 +69,57 @@ int main() {
     cout<<*arr;
     return 0;
 } */
+
+
+
+/* Calculating the n value inside a fucnction is not valid syntax becaue array akwsys pass
+by reference ....for more clear see the upadted below two code */
+
+
+/* #include<iostream>
+using namespace std;
+
+void PrintArray(int nums[]){
+
+    int n = sizeof(nums) / sizeof(int);
+
+    for(int i = 0 ; i < n ; i++){
+        cout<<nums[i]<<endl;
+    }
+
+}
+
+int main() {
+
+    int arr[5] = {1,2,3,4,5};
+     int n = sizeof(nums) / sizeof(int);
+    PrintArray(arr , n);
+
+    return 0;
+} */
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+void PrintArray(int nums[], int n)
+{
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << nums[i] << endl;
+    }
+}
+
+int main()
+{
+
+    int arr[5] = {1, 2, 3, 4, 5};
+    int n = sizeof(arr) / sizeof(int);
+    PrintArray(arr, n);
+
+    return 0;
+}
