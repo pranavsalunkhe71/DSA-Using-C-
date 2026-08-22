@@ -1,89 +1,86 @@
-// // // #include<iostream>
-// // // using namespace std;
-
-
-// // // int printarr(int *arr,int n){
-
-// // //     for (int i = 0 ; i<n;i++){
-
-// // //     cout<<arr[i]<<"\n";
-// // //     }
-
-
-
-// // //     return 0;
-// // // }
-
-
-// // // int main() {
-// // //     int arr[4]={13,232,24,535};
-// // //     int n = sizeof(arr)/sizeof(int);
-// // //     cout<<"n :"<<n; 
-// // //     int copyarr[n];
-// // //     for (int i = 0 ;i<n;i++){
-// // //         int j = n-i-1;
-// // //         copyarr[i]=arr[j];
-
-// // //     }
-// // //     for (int i = 0 ;i<n;i++){
-// // //         arr[i]=copyarr[i];
-// // //     }
-
-// // //     printarr(arr,n);
-// // //     return 0;
-// // // }
-
-
-
-
-// #include<iostream>
-// using namespace std;
-
-// int reverse(int arr[],int len){
-//     for (int i = 0 ; i<5 ;i++){
-
-//         cout<<arr[i]<<"\n";
-//     }
-//     return 0;
-// }
-
-// int main() {
-
-//     int arr[5]={5,4,3,2,1};
-//     int length = sizeof(arr)/sizeof(int);
-//     int copyarr[length];
-
-//     for (int i = 0 ;i<=length;i++){
-//             int j = length - i - 1;
-//             copyarr[i]=arr[j];
-//     }
-//     for (int i = 0 ;i<5;i++){
-
-//         arr[i]=copyarr[i];
-//     }
-
-
-//     reverse(arr,length);
-    
-//     return 0;
-// }
+/*  using extra space */
 
 #include<iostream>
 using namespace std;
-int reverse(int *ptr , int n ){
-    int reversearr [5] ;
-    for(int i = 0 ; i < n ; i++){
-        reversearr[i] = ptr[n-i-1];
-    }
-    for(int i = 0 ; i < 5 ; i++){
-        cout<<reversearr[i]<<",";
-    }
+
+void ReverseArray(int *arr , int n ){
+
+int CopyArray[n];
+
+for (int i = 0 ; i < n ; i++){
+
+    int j = (n-i-1);
+
+    CopyArray[i] = arr[j];
+}
+cout<<"[";
+for(int i = 0 ; i < n ; i++){
+    
+    arr[i] = CopyArray[i];
+    cout<<arr[i]<<",";
+}
+cout<<"]";
 
 }
 
 int main() {
-    int arr[5]={5,4,3,2,1};
-    int length = sizeof(arr)/sizeof(int);
-    reverse(arr,length);
+    int arr[5] = {5,4,3,9,2};
+    int n = sizeof(arr) / sizeof(int);
+
+    ReverseArray(arr,n);
     return 0;
 }
+
+
+
+
+
+/* Two Pointer Approach .... Not using extra space */
+
+#include<iostream>
+
+using namespace std;
+
+void ReverseArray(int *arr , int n ){
+
+    int start =  0;
+    int end =  n-1 ;
+    while(start < end){
+
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        
+
+        start++;
+        end--;
+
+    }
+    for (int i = 0; i < n; i++)
+    {
+        cout<<arr[i]<<",";
+    }
+    
+
+
+}
+
+int main() {
+    int arr[5] = {5,4,3,9,2};
+    int n = sizeof(arr) / sizeof(int);
+
+    ReverseArray(arr,n);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
