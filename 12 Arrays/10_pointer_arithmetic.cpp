@@ -1,15 +1,17 @@
-/*Addition And Substraction Of Constants*/ 
-// // // #include<iostream>
-// // // using namespace std;
+// /*Addition And Substraction Of Constants*/ 
+// #include<iostream>
+// using namespace std;
 
-// // // int main() {
-// // //     int arr = 20;
-// // //     int *ptr = &arr;
-// // //     cout<<ptr<<endl;
-// // //     cout<<ptr+4<<endl;
+// int main() {
+//     int arr = 20;
+//     int *ptr = &arr;
+//     cout<<ptr<<endl;
+//     cout<<ptr+4<<endl;
     
-// // //     return 0;
-// // // }
+//     return 0;
+// }
+
+
 
 
 /* here we are adding 4 to the pointer value,
@@ -26,7 +28,7 @@
     for (int i = 0 ; i < length ; i++)
     {
         cout<<*ptr<<endl;
-        ptr+1;
+        ptr++;
 
     }
 
