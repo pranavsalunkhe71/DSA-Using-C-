@@ -1,37 +1,25 @@
-
 #include<iostream>
-
+#include<cmath>
 using namespace std;
+
 int main(){
 
-int tax;
+    int income ;
+    cout<<"Enter a income : ";
+    cin>>income;
 
+    if (income < 5 * pow(10,5)){
 
-cout<<"Enter A How Much Tax Do You Paid : "<<endl;
-cin>>tax;
+        cout<<"Tax is "<<income;
+    }
 
-int tax1 = (0.20*tax) ;
-int tax2 = (0.30*tax)  ;
-
-if(tax>=0 && tax<=500000){
-
-    cout<<"The Money After Tax Is : "<<tax<<endl;
-
-}
-else if (tax >=500000 && tax<=1000000){
-
-    cout<<"The Money After Tax Is : "<<tax1<<endl;
-
-}
-else{
-
-    cout<<"The Money After Tax Is : "<<tax2<<endl;
-
-}
-
-
-
-
-
-    return 0;
+    else if ( income <= 10 * pow(10,5))
+    {
+        cout<< (income * 20) / 100; 
+    }
+    else
+    {
+        cout<< (income * 30) / 100; 
+    }
+    return 0 ; 
 }

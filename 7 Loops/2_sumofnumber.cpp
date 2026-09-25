@@ -1,26 +1,16 @@
 #include<iostream>
 using namespace std;
 
-int main(){
+int main() {
+    int num , sum = 0 ;
+    cout<<"Enter a number : ";
+    cin>>num;
 
-int number;
-cout<<"enter a number :";
-cin>>number;
+    for(int i = 1 ; i <= num ; i++){
+        
+        sum+=i;
+    }
 
-int i=number;
-int sum=0;
-
-for (i;i>0;i--){
-
-    sum+=i;
-}
-
-cout<<"sum of numbers : "<<sum;
+    cout<<sum;
     return 0;
-
-
-
-
-
-
-
+}

@@ -1,33 +1,25 @@
 
 #include<iostream>
-
 using namespace std;
-int main(){
 
-int age ;
-bool isAdult;
-
-cout<<"enter a age : "<<endl;
-cin>>age;
-
-// // if (age >= 18){
-
-// //     cout<<"The Person Is Adult"<<endl;
-// // }
-// // else{
-
-// //     cout<<"The Person Is UnderAge"<<endl;
-// // }
-
-/*******The Instead Of Above If Else The We Can Use Ternery Operator********** */
-
-isAdult = age>=18 ? true :false;
-cout<<isAdult;
-
-
+int main() {
+    int age = 1;
+    bool isTrue = (age>=18) ? true : false;
+    cout<<isTrue;
     return 0;
 }
 
 
 
+#include<iostream>
+using namespace std;
+int main(){
 
+  int  num1 = 12 , num2 = 1120;
+
+    int big = (num1>num2) ? num1 : num2;
+
+  cout<<big;
+
+    return 0 ;
+}

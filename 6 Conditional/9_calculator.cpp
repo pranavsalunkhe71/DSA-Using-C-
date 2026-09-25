@@ -1,60 +1,36 @@
-
-
 #include<iostream>
-
 using namespace std;
-int main(){
 
-float num1;
-float num2;
+int main() {
+    int num1 , num2;
+    cout<<"Enter Num1 : ";
+    cin>>num1;
+    cout<<"Enter Num2 : ";
+    cin>>num2;
 
-cout<<"Enter A First Number : ";
-cin>>num1;
-cout<<"Enter A Second Number : ";
-cin>>num2;
-
-char button;
-cout<<"Press + For add : \nPress - For sub: \nPress * For mul: \nPress / For div :\n";
-cin>>button;
-
-switch (button)
-{
-case '+':{
-    cout<<"num1 + num2 : "<<num1+num2<<endl;
-}
-break;
-case '-' :{
-    
-    cout<<"num1 - num2 :"<<num1-num2<<endl;
-}
-break;
-case '*' :{
-    cout<<"num1 * num2 : "<<num1*num2<<endl;
-    
-}
-break;
-case '/' :{
-    cout<<"num1 / num2 : "<<num1/num2<<endl;
-
-}
-    break;
-
-default:
-    break;
-}
+    string operation ;
+    cout<<"Enter a '+' for addition"<<endl;
+    cout<<"Enter a '-' for substraction"<<endl;
+    cout<<"Enter a '*' for multiplication"<<endl;
+    cout<<"Enter a '/' for division"<<endl;
+    cin>>operation;
 
 
-
+    if (operation == "+"){
+        cout<<num1+num2;
+    }
+    else if (operation == "-"){
+        cout<<num1-num2;
+    }
+     else if (operation == "*"){
+        cout<<num1*num2;
+    }
+    else if (operation == "/"){
+        cout<<num1/num2;
+    }
+    else{
+        cout<<"Invalid";
+    }
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-

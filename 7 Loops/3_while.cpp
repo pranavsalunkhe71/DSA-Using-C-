@@ -1,39 +1,17 @@
-/*#include<iostream>
+#include<iostream>
 using namespace std;
 
 int main(){
 
-int i = 0;
+    int num = 1 ;
+    while(num <= 10){
+        cout<<num;
+        num++;
+        cout<<endl;
+    }
 
-while (i<10){
-    cout<<"HELLO\n";
-    i++;
+
+
+    return 0 ; 
 
 }
-
-
-
-
-    return 0;
-}*/
-
-
-#include<iostream>
-using namespace std;
- int main(){
-
-    int number ;
-    cout<<"enter a number: ";
-    cin>>number; 
-
-    int sum = 0;
-    int i = 0;
-    while(i<=number){
-        sum+=i;
-       
-        i++;
-    }
-     cout<<sum<<endl;
-
-    return 0 ;
- }

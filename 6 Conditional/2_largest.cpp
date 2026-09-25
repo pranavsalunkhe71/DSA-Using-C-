@@ -1,25 +1,19 @@
-// #include<iostream>
+#include <iostream>
+using namespace std;
 
-// using namespace std;
-// int main(){
+int main(){
 
-// int num1 ;
-// int num2 ;
+    int a = 10 ; 
+    int b = 54;
 
-// cout<<"Enter A Number 1 : ";
-// cin>>num1;
-// cout<<"Enter A Number 2 : ";
-// cin>>num2;
+    if(a > b){
+        cout<<"a is largest";
+
+    }
+    else{
+        cout<<" b is largest";
+    }
 
 
-// if (num1 > num2){
-//     cout<<"The Number 1 Is Largest";
-// }
-
-// else {
-//     cout<<"The Number 2 Is Largest";
-// }
-
-//     return 0;
-//  }
-
+    return 0 ;
+}

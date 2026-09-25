@@ -1,80 +1,19 @@
-
-
-// #include<iostream>
-
-// using namespace std;
-// int main(){
-
-// int year;
-
-// cout<<"Enter A Year : ";
-// cin>>year;
-
-
-// if(year%4==0){
-
-//     cout<<"The Entered year Is Leap";
-// }
-// else if (year%400==0){
-    
-//     cout<<"The Entered year Is Leap";
-
-// }
-// else{
-//     cout<<"The Entered year Is Not Leap";
-
-
-// }
-
-
-
-//     return 0;
-// }
-
-
-
-// #include<iostream>
-// using namespace std;
-
-// int main() {
-//     int year ;
-//     cout<<"enter a year : ";
-//     cin>>year;
-
-
-//     if ( year%400 == 0 || (year%4 == 0 && year%100 != 0)){
-//         cout<<"leap year";
-//     }
-//     else{
-//         cout<<"not leap year ";
-//     }
-//     return 0;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main(){
 
-    int year ; 
-    cout<<"enter a year";
+int main() {
+    int year ;
+    cout<<"Enter a year to see if its leap year or not ?";
     cin>>year;
 
 
+    if ((year % 4 == 0 && year % 100 !=0 ) || year % 400 == 0 ){
+        cout<<"Leapp Year";
+    }
+    else{
+        
+        cout<<" NOt Leap Year";
+    }
 
-    if (year % 400 = 0 || ( year % 4 == 0 && year % 100 != 0) )
-
-
-
-    return 0 ;
+    return 0;
 }

@@ -33,28 +33,30 @@
 
 
 
-
 #include<iostream>
 using namespace std;
 
-void subarray (int *arr , int n ){
+int PrintSubArray(int *arr , int n ){
 
+    for(int start = 0 ; start < n  ; start++){
+        for(int end = start ; end < n ; end++){
+            // cout<<"("<<start<<","<<end<<")";
 
-    for (int start = 0 ; start < n ; start++){
+            for(int i = start ; i <=end ; i++){
+                cout<<i<<;
+            }
 
-        for (int end = start ; end < n  ;end++){
-            cout<<"["<<start<<","<<end<<"],";
+            cout<<endl;
         }
-        cout<<endl;
     }
 
-
+    return 0;
 }
 
 int main() {
+    
     int arr[5] = {1,2,3,4,5};
-    int n = sizeof(arr) / sizeof(int);
-
-    subarray(arr , n );
+    int n = 5 ; 
+    PrintSubArray(arr,n);
     return 0;
 }
