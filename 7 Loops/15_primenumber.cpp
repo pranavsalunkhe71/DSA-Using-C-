@@ -1,33 +1,35 @@
 #include<iostream>
-#include<cmath>
 using namespace std;
 
 int main() {
     
-int n = 9;
-bool number = true;
-int i = 2 ;
+    int number = 0 ; 
+    int isPrime = true;
+    cout<<"Enter a number : ";
+    cin>>number;
 
-    while ( i  < sqrt(n)){
 
-        if (n % i == 0){
-          number =  false;
-          break;
-        }
-      
-
-        i++;
-        
-
+    if(number<=1){
+        isPrime = false;
     }
 
-    if (number){
+    for(int i = 2 ; i < number ;i++){
 
-        cout<<"it is prime number ";
+        if(number%i == 0){
+           isPrime = false;
+           break;
+        } 
+      
+    }
+
+    if(isPrime){
+        cout<<"Prime";
     }
     else{
-        cout<<"number is not prime";
+        cout<<"Not Prime";
+
     }
+
 
     return 0;
 }
