@@ -1,2 +1,2 @@
 
-            cout<<IsTrue;
+        for(int space = 1 ; space <

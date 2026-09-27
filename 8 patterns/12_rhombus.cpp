@@ -1,42 +1,19 @@
-// // // // #include<iostream>
-// // // // using namespace std;
-// // // // int main(){   
-    
-// // // // int n = 5;
-// // // // for (int i = n; i >= 1 ; i--){
-// // // //     //for spaces
-// // // //     for (int j = 1 ;j<=(i-1);j++){
-// // // //         cout<<" ";
-// // // //     }
-
-// // // //     //for stars
-// // // //     for(int k = 1;k<=5;k++){
-// // // //         cout<<"*";
-// // // //     }
-// // // //     cout<<endl;
-// // // // }
-
-    
-    
-    
-// // // //     return 0 ;
-// // // // }
-
-
 #include<iostream>
 using namespace std;
 
 int main() {
-    
-int n = 5;
-    for(int i = n ; i >= 1 ; i--){
-        for(int j = 1 ; j < i ; j++){
+    int n = 5;
+    for(int i = 0 ; i< n; i++){
+
+        for(int space = 0 ; space < (n-i) ; space++)
+        {
             cout<<" ";
         }
-        for(int k = 0 ; k < n ; k++){
+        for(int star = 0 ; star < n ; star++){
             cout<<"*";
         }
-        cout<<endl;
+        cout<<"\n";
+
     }
     return 0;
 }
