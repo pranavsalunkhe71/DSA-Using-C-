@@ -1,44 +1,44 @@
-
-
 #include <iostream>
 using namespace std;
 
 int BinarySearch(int *arr, int n, int key)
 {
 
-    int Start = 0;
-    int End = n - 1;
-    while (Start <= End)
+    int start = 0;
+    int end = n - 1;
+
+    while (start <= end)
     {
 
-        int MidValue = (Start + End) / 2;
+        int mid = (start + end) / 2;
 
-        if (key == arr[MidValue])
+        if (arr[mid] == key)
         {
-            cout << "The Value " << key << " Is At " << MidValue << " Location";
-            return 0;
+            return mid;
         }
-        else if (key > arr[MidValue])
+
+        else if (arr[mid] > key)
         {
-            Start = MidValue + 1;
+
+            end = mid - 1;
         }
+
         else
         {
-            End = MidValue - 1;
-        }
 
-       
+            start = mid + 1;
+        }
     }
 
-    return 0;
+    return -1;
 }
 
 int main()
 {
-    int arr[6] = {10, 12, 14, 16, 18, 20};
+    int arr[] = {2, 4, 6, 8, 10, 12, 14, 16};
     int n = sizeof(arr) / sizeof(int);
-    int key = 20;
+    int key = 22;
+    cout << BinarySearch(arr, n, key);
 
-    BinarySearch(arr, n, key);
     return 0;
 }
