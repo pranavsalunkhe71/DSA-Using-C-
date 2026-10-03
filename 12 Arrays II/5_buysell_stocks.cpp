@@ -2,29 +2,37 @@
 using namespace std;
 
 
-void maxprofit(int *prices , int n ){
+void BuySellStockMaxProfit(int *prices , int n ){
 
-    int bestbuy [100000];
-    bestbuy[0] = INT_MAX;
-    for (int i = 1 ; i < n ; i++)
-    {
-        bestbuy[i] = min(bestbuy[i-1],prices[i-1]);
-        
-    }
+    int BestBuy[100000];
+    BestBuy[0] = INT_MAX;
     int maxprofit = 0;
 
-    for (int i = 0 ; i < n ; i++)
-    {
-        int currentprofit = prices[i] - bestbuy[i];
-        maxprofit = max(maxprofit,currentprofit);
+    for(int i = 1 ; i < n ; i++){
+
+        BestBuy[i] = min(BestBuy[i-1],prices[i-1]);
+        
     }
-    cout<<maxprofit;
+
+    for(int i = 0 ; i < n ; i++){
+
+        int profit = prices[i] - BestBuy[i];
+
+        if (profit > maxprofit){
+            maxprofit = profit;
+        }
+
+    }
+
+    cout<<"Max Profit is : "<<maxprofit;
+
+   
 }
 
 int main() {
-    int prices[6]={7,1,5,3,6,4};
+    int prices[6]={7,1,5,3,24,4};
     int n = sizeof(prices)/sizeof(int);
-    maxprofit(prices,n);
+    BuySellStockMaxProfit(prices,n);
     return 0;
 }
 

@@ -1,62 +1,74 @@
 // /* subarrays is a contiguous part of an array */
 
-// #include<iostream>
-// using namespace std;
 
-// int subarray(int *arr ,int n){
+/* #include<iostream>
+using namespace std;
 
-//     for (int start = 0 ; start <n ; start++){
+void PrintSubArray(int *arr , int n ){
+    for(int k = 0 ; k < n ; k++){
+        for(int i = k ; i < n ; i++){
+            for(int j = k ; j <= i ; j++){
+                cout<<arr[j]<<",";
+            }
+            cout<<endl;
+        }
+        cout<<endl;
+
+        }}
     
-//         for (int end = start ; end <n ; end++){
-//             // // cout<<"("<<start<<","<<end<<")";
 
-//             for (int start = start ; start<=end ; start++){
-//                 cout<<arr[start];
-
-//             }
-//             cout<<",";
-//         }
     
-//         cout<<endl;
-//     }
-// }
 
 
-// int main() {
-    
-//     int arr[5] = {1,2,3,4,5};
-//     int n = sizeof(arr)/sizeof(int);
+int main() {
+    int arr[5] = {1,2,3,4,5};
+    int n = sizeof(arr) / sizeof(int);
 
-//     subarray(arr,n);
-//     return 0;
-// }
+    PrintSubArray(arr,n);
+    return 0;
+}
 
+ */
+
+
+
+
+// /* subarrays is a contiguous part of an array */
 
 
 #include<iostream>
 using namespace std;
 
-int PrintSubArray(int *arr , int n ){
+void PrintSubArray(int *arr , int n ){
+    
+        for(int start = 0 ; start < n ; start++){
+            for(int end = start ; end < n ; end++){
+                
+                for(int elem = start ; elem <= end ; elem++){
 
-    for(int start = 0 ; start < n  ; start++){
-        for(int end = start ; end < n ; end++){
-            // cout<<"("<<start<<","<<end<<")";
+                    cout<<arr[elem]<<",";
 
-            for(int i = start ; i <=end ; i++){
-                cout<<i<<;
+                }
+                cout<<" ";
+          
+                
+                
+
             }
-
             cout<<endl;
         }
-    }
+        cout<<endl;
 
-    return 0;
-}
+        }
+    
+
+    
+
 
 int main() {
-    
     int arr[5] = {1,2,3,4,5};
-    int n = 5 ; 
+    int n = sizeof(arr) / sizeof(int);
+
     PrintSubArray(arr,n);
     return 0;
 }

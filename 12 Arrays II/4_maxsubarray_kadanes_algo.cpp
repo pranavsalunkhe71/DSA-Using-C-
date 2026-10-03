@@ -1,22 +1,26 @@
 
 #include <iostream>
+#include<cmath>
 using namespace std;
 
 void maxsubarray(int arr[6], int n)
 {
     int maxsum = INT_MIN;
     int currentsum = 0 ;
-    for (int i = 0; i < n; i++)
-    {
+
+    for(int i = 0 ; i < n ;  i++){
+
         currentsum += arr[i];
-        maxsum = max(maxsum,currentsum);
-        if (currentsum < 0){
-            currentsum =  0;
+        maxsum = max(currentsum,maxsum);
+
+        if(currentsum < 0){
+            currentsum = 0 ;
         }
 
     }
-    cout<<"The Max Sub Is :"<<maxsum;
-    }
+
+    cout<<maxsum;
+}
 
 int main()
 {
