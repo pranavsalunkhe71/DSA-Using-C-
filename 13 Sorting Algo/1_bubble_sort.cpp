@@ -1,84 +1,33 @@
-// // #include<iostream>
-// // using namespace std;
-
-// // int printbuble(int arr [] , int n){
-// //     for (int i = 0 ; i < n ; i++){
-// //         cout<<arr[i];
-// //     }
-// //     cout<<"\n";
-// // }
-// // int bubble(int arr[] , int n ){
-// //     int temp = 0 ;
-// //     for(int i = 0 ; i < n - 1 ;  i++){
-// //         bool isswap = false;
-// //         for(int j = 0 ; j < n-i-1 ;  j++){
-            
-// //             if (arr[j] > arr[j+1]){
-
-// //                swap(arr[j],arr[j+1]);
-    
-// //             }
-
-// //             if (!isswap){
-// //                 /* Array is already sorted */
-// //                 return ;
-// //             }
-            
-// //         }
-// //     }
-// //     printbuble(arr,n);
-    
-// //     }
-
-
-
-// // int main() {
-// //     int arr[5] = {5,4,-1,-3,2};
-// //     int len = sizeof(arr) / sizeof(int);
-// //     bubble(arr,len);
-// //     return 0;
-// // }
-
-
-
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int printsorted(int *ptr , int n ){
-for(int i = 0 ; i < n ; i++){
-    cout<<ptr[i];
-}
-cout<<endl;
-}
+void BubbleSort(int *arr, int n)
+{
 
-int bubble(int *arr , int n){
-
-    for (int i = 0 ; i < n-2 ; i++){
-        bool isswap  = false;
-        for (int j = 0 ; j < n-i-1 ; j++){
-
-            if (arr[j] > arr[j+1]){
-                swap(arr[j],arr[j+1]);
-                isswap = true;
+    int arr2[5];
+    for (int i = 0; i < (n - 1); i++)
+    {
+        for (int j = 0; j < (n - i - 1); j++)
+        {
+            arr2[j] = min(arr[j], arr[j + 1]);
+            if (arr[j] > arr[j + 1])
+            {
+                swap(arr[j], arr[j + 1]);
             }
-
-            if(!isswap){
-                //
-                return ;
-            }
-
         }
-        
     }
 
-printsorted(arr,n);
-
-
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i];
+    }
 }
 
- int main() {
-    int arr[5] = {5,4,-1,-3,2};
-    int len = sizeof(arr) / sizeof(int);
-    bubble(arr,len);
+int main()
+{
+    int arr[5] = {5, 4, 1, 3, 2};
+    int n = sizeof(arr) / sizeof(int);
+
+    BubbleSort(arr, n);
     return 0;
 }
