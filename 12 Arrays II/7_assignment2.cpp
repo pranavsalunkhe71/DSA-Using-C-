@@ -54,7 +54,7 @@ int main()
 {
     int nums[7] = { 4, 5, 6, 7, 0, 1, 2 };
 ;
-    int target = 1;
+    int target = 3;
     int n = sizeof(nums) / sizeof(int);
     cout<<RotatedArraySearch(nums, n, target);
     return 0;
