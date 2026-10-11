@@ -14,7 +14,7 @@ void insertion(int *arr, int n)
             previous--;
         }
         
-
+       
         }
 
 
