@@ -13,7 +13,8 @@ void countsort(int *arr, int n) {
 }
 
 int main() {
-    int arr[7] = {1,4,1,1,1,3,2}; 
+    int arr[7] = {1,4,1,1,1,3,2};   
+    
     int n = sizeof(arr) / sizeof(int);
 
     countsort(arr, n);
