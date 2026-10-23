@@ -1,26 +1,63 @@
 #include <iostream>
 using namespace std;
 
-void SpiralMatrix(int arr[4][4] , int n , int m ){
+void SpiralMatrix(int arr[4][4], int n, int m)
+{
 
-    int sr = 0 , sc = 0 , er = n-1 , ec = m-1;
-    for(int i = sc ; i <= ec ; i++){
-            cout<<arr[sr][i];
-    }
-    cout<<endl;
-    for(int i = sc+1 ; i <= er ; i++){
-        cout<<arr[sr+i][er];
-    }
-    cout<<endl;
-    for(int i = ec-1 ; i >= sc ;i--){
-        cout<<arr[er][i];
-    }
-    cout<<endl;
-    for(int i = er-1 ; i > sr ; i--){
-        cout<<arr[i][sr];
-    }
-    cout<<endl;
+    int sr = 0, sc = 0, er = n - 1, ec = m - 1;
 
+    while (sr <= er && sc <= ec)
+    {
+        
+        
+        /* Top */
+        for (int i = sc; i <= ec; i++)
+        {
+            cout << arr[sr][i] << " ";
+        }
+   
+
+        
+        
+        /* Right */
+
+        for (int i = sc + 1; i <= er; i++)
+        {
+            cout << arr[i][er] << " ";
+        }
+      
+
+        
+        
+        /* Bottom */
+
+        for (int i = ec - 1; i >= sc; i--)
+        {
+            if(sr == er){
+                break;
+            }
+        
+           cout << arr[er][i] << " ";
+        }
+        
+        
+        
+        /* Left */
+  
+        for (int i = er - 1; i > sr; i--)
+        {
+            if(sc == ec){
+                break;
+            }
+            cout << arr[i][sr] << " ";
+        }
+    
+
+        sr++;
+        sc++;
+        er--;
+        ec--;
+    }
 }
 
 int main()
@@ -29,6 +66,6 @@ int main()
 
     int n = sizeof(arr) / sizeof(arr[0]);
     int m = sizeof(arr[0]) / sizeof(arr[0][1]);
-    SpiralMatrix(arr,n,m);
+    SpiralMatrix(arr, n, m);
     return 0;
 }
